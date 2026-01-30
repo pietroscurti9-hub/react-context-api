@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import BudgetContext from "../Context.jsx/BudgetContext";
 
 export default function Header() {
 
@@ -21,6 +22,10 @@ export default function Header() {
 
                     </ul>
                 </nav>
+
+                
+                    <BudgetContext />
+                
 
             </div>
         </header>
