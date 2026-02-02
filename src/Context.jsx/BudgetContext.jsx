@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // Define a new context
 const BudgetContext = createContext()
@@ -13,7 +13,7 @@ export default function BudgetContextProvider({ children }) {
 
     // State actions
     const toggleBudgetMode = () => {
-        setBudgetMode(!budgetMode ); // 
+        setBudgetMode(!budgetMode ); // inverter (! NOT)
     }
     
     return (
@@ -33,7 +33,7 @@ export default function BudgetContextProvider({ children }) {
 export function useBudget() {
     const context = useContext(BudgetContext)
     if(!context) {
-        throw new Error('useBudget most be used within the BudgetContextProvider')
+        throw new Error('useBudget most be uSed within the BudgetContextProvider')
     }
     return context;
 }

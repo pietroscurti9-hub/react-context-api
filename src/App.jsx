@@ -11,13 +11,13 @@ import BudgetContextProvider from './Context.jsx/BudgetContext'
 function App() {
 
   return (
-      <BudgetContextProvider>
+    <BudgetContextProvider>
         <BrowserRouter>
           <Routes>
             <Route element={<AppLayout />}>
               <Route path='/' element={<Homepage />} />
-              <Route path='/Prodotti' element={<Prodotti />} />
               <Route path='/ChiSiamo' element={<ChiSiamo />} />
+              <Route path='/Prodotti' element={<Prodotti />} />
               <Route path='/Prodotti/:id' element={<DettagliProdotti />} />
             </Route>
           </Routes>
