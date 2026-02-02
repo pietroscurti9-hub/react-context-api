@@ -11,6 +11,7 @@ export default function DettagliProdotti() {
     const { id } = useParams();
 
     const [dettagliProdotto, setDettagliProdotto] = useState(null)
+   
 
     useEffect(() => {
         axios.get(endDetail + id)
@@ -26,6 +27,7 @@ export default function DettagliProdotti() {
     return (
         <>
             <h2>pagina dettaglio prodotti {id}</h2>
+            
 
             {dettagliProdotto !== null ? (
                 <div className="container-dettagli">

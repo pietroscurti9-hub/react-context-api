@@ -6,12 +6,12 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppLayout from './Layaouts/AppLayout'
 import DettagliProdotti from './Pages/DettagliProdotti'
+import BudgetContextProvider from './Context.jsx/BudgetContext'
 
 function App() {
 
   return (
-    <>
-      {/* <BudgetProvider> */}
+      <BudgetContextProvider>
         <BrowserRouter>
           <Routes>
             <Route element={<AppLayout />}>
@@ -22,8 +22,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      {/* </BudgetProvider> */}
-    </>
+      </BudgetContextProvider>
   )
 }
 

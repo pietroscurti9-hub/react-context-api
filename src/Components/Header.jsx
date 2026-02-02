@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
-import BudgetContext from "../Context.jsx/BudgetContext";
+import BudgetContext, { useBudget } from "../Context.jsx/BudgetContext";
 
 export default function Header() {
-
+   const {budgetMode,toggleBudgetMode } =  useBudget()
 
     return (
         <header>
             <div className="container text-center mt-3">
+
 
                 <nav>
                     <ul>
@@ -23,8 +24,11 @@ export default function Header() {
                     </ul>
                 </nav>
 
+                <button onClick={toggleBudgetMode}>
+                    {budgetMode === false ? 'Attiva ' : 'Disattiva '} budget mode
+                </button>
                 
-                    <BudgetContext />
+                    {/* <BudgetContext /> */}
                 
 
             </div>
